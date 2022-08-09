@@ -23,7 +23,7 @@
         $.get("http://localhost:3000/posts", (data) => {
           data.forEach((e) => addPostRow(e))
         }).fail(() => {
-          console.log("Server Error")
+          alert("Server Error");
         })
       }
       const buildForm = () => {
@@ -55,7 +55,7 @@
           data: data,
           url: "http://localhost:3000/posts",
           success: (res) => addPostRow(res),
-        }).fail(() => console.log("Error sending the POST query"))
+        }).fail(() => alert("Error sending the POST query"))
       }
       buildForm()
       $("input").keypress(function (event) {
