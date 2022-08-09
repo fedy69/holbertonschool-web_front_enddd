@@ -19,6 +19,8 @@
   --line-height-big: 1.8;
   --section-header-align: center;
   --section-tagline-transform: uppercase;
+  --section-title-margin: 0;
+  --section-title-color: var(--color-black);
 }
 html {
   scroll-behavior: smooth;
@@ -30,15 +32,25 @@ body {
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-base);
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+.section-tagline, .section-title {
   font-family: var(--font-family-title);
   font-weight: var(--font-weight-bold);
 }
-body, a {
+body, a:link {
   color: var(--text-color);
 }
-a {
+a:link {
   text-decoration: none;
+}
+a:visited {
+  font-style: italic;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  background-color: var(--color-light-grey);
 }
 .visually-hidden {
   display: none;
@@ -47,9 +59,12 @@ a {
   color: var(--color-primary);
 }
 .section-tagline {
-  font-family: var(--font-family-title);
   text-transform: var(--section-tagline-transform);
-  font-weight: var(--font-weight-bold);
+}
+.section-title {
+  font-size: var(--font-size-xx-large);
+  margin: var(--section-title-margin);
+  color: var(--section-title-color);
 }
 .section-header {
   text-align: var(--section-header-align);
