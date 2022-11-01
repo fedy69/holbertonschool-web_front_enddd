@@ -23,7 +23,7 @@
         $.get("http://localhost:3000/posts", (data) => {
           data.forEach((e) => addPostRow(e))
         }).fail(() => {
-          console.log("Server Error")
+          alert("Server Error");
         })
       }
       listPosts()
